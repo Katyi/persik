@@ -1,24 +1,58 @@
 'use client';
 import imagesList from '@/data/imagesList';
-import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Pagination from '../Pagination/Pagination';
+import Gallery from '../gallery/Gallery';
 
 const AlbumList = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const nbPerPage = 10;
-  const pageSize = 10;
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, [currentPage]);
+
+  useEffect(() => {
+    // Скроллим вверх только если модалка ЗАКРЫТА
+    if (selectedIndex === null) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  }, [currentPage, selectedIndex]);
+
+  const nbPerPage = 20;
+  const pageSize = 20;
   const startIndex = (currentPage - 1) * pageSize;
   const paginatedImagesList = imagesList.slice(
     startIndex,
-    startIndex + pageSize
+    startIndex + pageSize,
   );
 
   const numberOfPages = Math.ceil(imagesList.length / nbPerPage);
 
+  const handleNextPage = () => {
+    if (currentPage < numberOfPages) {
+      setCurrentPage((prev) => prev + 1);
+      return true; // Сообщаем, что переход возможен
+    }
+    return false;
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+      return true;
+    }
+    return false;
+  };
+
   return (
-    <div>
+    <div className="flex flex-col gap-10">
       <Pagination
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
@@ -26,29 +60,28 @@ const AlbumList = () => {
       />
 
       {/* IMAGES */}
-      <div className="grid grid-cols-1 md:grid-cols-2 py-5 px-10 gap-10 justify-items-center">
-        {paginatedImagesList.map((img: Img, ind: number) => (
-          <div
-            key={ind}
-            className="flex flex-col items-center bg-white w-[100%] h-fit shadow-md"
-          >
-            <div className="mt-3 mb-3 text-left text-[14px] font-[700] text-zinc-500 ml-5 w-full">
-              {img.date}
-            </div>
-            <div className="h-[300px] sm:h-[400px] md:h-[300px] lg:h-[500px] xl:h-[600px] w-[100%]">
-              <Image
-                src={require('../../assets/' + img.title + '.jpg')}
-                alt="Images"
-                quality={100}
-                className="h-full object-cover"
-              />
-            </div>
-            <div className="text-left w-full mt-3 mb-3 ml-5 text-[14px] font-[700] text-zinc-500">
-              {img.text}
+      <Gallery
+        items={paginatedImagesList}
+        selectedIndex={selectedIndex}
+        setSelectedIndex={setSelectedIndex}
+        onNextPage={handleNextPage}
+        onPrevPage={handlePrevPage}
+        hasNextPage={currentPage < numberOfPages}
+        hasPrevPage={currentPage > 1}
+        getCard={(p) => ({
+          id: p.id,
+          title: p.title,
+          text: p.text || '',
+        })}
+        renderCardContent={(card) => (
+          <div className="flex items-center justify-between px-1 py-1">
+            <div className="flex flex-col gap-1">
+              <p className="text-xs">{card.date}</p>
+              <p className="text-xs font-semibold">{card.text}</p>
             </div>
           </div>
-        ))}
-      </div>
+        )}
+      />
 
       <Pagination
         currentPage={currentPage}

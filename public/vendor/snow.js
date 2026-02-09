@@ -9,6 +9,9 @@ if (!embedimSnow) {
         '#dbf2fd',
         '#d8f8ff',
         '#b8ddfa',
+        // 'red',
+        // 'yellow',
+        // 'green',
       ];
       var item = items[Math.floor(Math.random() * items.length)];
       return item;

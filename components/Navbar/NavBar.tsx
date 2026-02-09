@@ -12,72 +12,105 @@ const NavBar = () => {
   const [dropdownMenu, setDropdownMenu] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  const checkIfClickedOutside = (e: any) => {
-    if (dropdownMenu && ref.current && !ref.current.contains(e.target)) {
+  // Исправляем тип события
+  const checkIfClickedOutside = (e: MouseEvent) => {
+    if (
+      dropdownMenu &&
+      ref.current &&
+      !ref.current.contains(e.target as Node)
+    ) {
       setDropdownMenu(false);
     }
   };
 
   useEffect(() => {
     document.addEventListener('mousedown', checkIfClickedOutside);
-
-    return () => {
+    return () =>
       document.removeEventListener('mousedown', checkIfClickedOutside);
-    };
   }, [dropdownMenu]);
 
   return (
-    <nav className="sticky top-0 bg-[#f5f3f1] flex items-center justify-between border-b px-8 h-[84px] z-10">
-      <div className="hidden sm:flex items-center sm:gap-6">
-        <Link href="/">
-          <div className="avatar">
-            <div className="ring-primary ring-offset-base-100 w-[60px] rounded-full ring-offset-2 overflow-hidden">
-              <Image src="/Pers.jpg" alt={'Avatar'} width={60} height={60} />
+    <nav className="sticky top-0 bg-[#f5f3f1]/90 backdrop-blur-md flex items-center justify-between border-b px-8 h-[84px] z-50">
+      {/* ЛЕВАЯ ЧАСТЬ */}
+      <div className="flex items-center">
+        {/* Аватар и Текст: видны только от sm (640px) и выше */}
+        <div className="hidden sm:flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-4 group">
+            <div className="relative w-[56px] h-[56px] rounded-full overflow-hidden ring-2 ring-orange-200 ring-offset-2 transition-all group-hover:ring-orange-400">
+              <Image
+                src="/Pers.jpg"
+                alt="Персик"
+                fill
+                className="object-cover"
+              />
             </div>
-          </div>
-        </Link>
-        <Link href="/">
-          <p className="neucha sm:text-[30px] md:text-[36px] font-black">
-            Мой кот Персик
-          </p>
-        </Link>
-      </div>
-      <div className="hidden xs:block sm:hidden">
-        <Image src="/pawprint.png" alt="pawprint" width={40} height={40} />
-      </div>
-
-      <ul className="hidden sm:flex gap-6">
-        {navbarLinks.map((link) => (
-          <Link
-            key={link.url}
-            href={link.url}
-            className={`${
-              link.url === currentPath && 'hidden'
-            } text-[700] text-zinc-500 text-[20px] md:text-[24px] hover:text-zinc-800`}
-          >
-            {link.label}
+            <p className="neucha text-[30px] md:text-[36px] font-black group-hover:text-orange-600 transition-colors">
+              Мой кот Персик
+            </p>
           </Link>
-        ))}
-      </ul>
+        </div>
 
-      <div ref={ref} className="cursor-pointer sm:hidden">
-        <Menu onClick={() => setDropdownMenu(!dropdownMenu)} />
-        {dropdownMenu && (
-          <div className="w-[180px] absolute top-16 xs:right-5 flex flex-col gap-2 p-3 rounded-lg border bg-white text-base">
-            {navbarLinks.map((link) => (
-              <Link
-                key={link.url}
-                href={link.url}
-                onClick={() => setDropdownMenu(!dropdownMenu)}
-                className={
-                  'text-[700] text-zinc-500 text-[16px] xs:text-[20px] hover:text-zinc-800'
-                }
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        )}
+        {/* Лапка: видна только на мобильных (меньше sm) */}
+        <div className="flex sm:hidden">
+          <Link href="/">
+            <Image
+              src="/pawprint.png"
+              alt="pawprint"
+              width={44}
+              height={44}
+              className="hover:rotate-12 transition-transform"
+            />
+          </Link>
+        </div>
+      </div>
+
+      {/* ПРАВАЯ ЧАСТЬ (МЕНЮ) */}
+      <div className="flex items-center">
+        {/* Десктопное меню */}
+        <ul className="hidden sm:flex gap-6 md:gap-8">
+          {navbarLinks.map((link) => (
+            <Link
+              key={link.url}
+              href={link.url}
+              className={`${
+                link.url === currentPath
+                  ? 'text-orange-600 font-bold'
+                  : 'text-zinc-500 hover:text-zinc-800'
+              } text-[20px] md:text-[24px] font-medium transition-colors`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </ul>
+
+        {/* Мобильное бургер-меню */}
+        <div ref={ref} className="sm:hidden relative">
+          <button
+            onClick={() => setDropdownMenu(!dropdownMenu)}
+            className="p-2 text-zinc-700 hover:bg-white/50 rounded-lg transition-colors"
+          >
+            <Menu size={32} />
+          </button>
+
+          {dropdownMenu && (
+            <div className="absolute top-full -right-6 mt-2 w-[180px] bg-white shadow-xl rounded-2xl border border-zinc-100 p-2 flex flex-col gap-1">
+              {navbarLinks.map((link) => (
+                <Link
+                  key={link.url}
+                  href={link.url}
+                  onClick={() => setDropdownMenu(false)}
+                  className={`p-3 rounded-xl text-[18px] transition-colors ${
+                    link.url === currentPath
+                      ? 'bg-orange-50 text-orange-600 font-bold'
+                      : 'hover:bg-zinc-50 text-zinc-600'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );

@@ -1,3 +1,5 @@
+declare module '*.css';
+
 interface PaginationProps {
   items: number;
   pageSize: number;

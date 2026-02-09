@@ -2,503 +2,597 @@ const imagesList = [
   {
     id: 1,
     title: 'Persik1',
-    date: "May 3, 2008",
-    text: "First Persik's photo"
+    date: 'May 3, 2008',
+    text: "First Persik's photo",
   },
   {
     id: 2,
-    title: "Persik2",
-    date: "May 3, 2008",
-    text: "Persik's feels at home already"
+    title: 'Persik2',
+    date: 'May 3, 2008',
+    text: "Persik's feels at home already",
   },
   {
     id: 3,
     title: 'Persik3',
-    date: "May 17, 2008",
-    text: "Little Persik"
+    date: 'May 17, 2008',
+    text: 'Little Persik',
   },
   {
     id: 4,
     title: 'Persik4',
-    date: "June 19, 2008",
-    text: "2.5 months old Persik"
+    date: 'June 19, 2008',
+    text: '2.5 months old Persik',
   },
   {
     id: 5,
     title: 'Persik5',
-    date: "July 21, 2008",
-    text: "3.5 months old Persik"
+    date: 'July 21, 2008',
+    text: '3.5 months old Persik',
   },
   {
     id: 6,
     title: 'Persik6',
-    date: "November 22, 2008",
-    text: "7.5 months old Persik"
+    date: 'November 22, 2008',
+    text: '7.5 months old Persik',
   },
   {
     id: 7,
     title: 'Persik7',
-    date: "February 23, 2009",
-    text: "Persik didn't like fish, only tuna"
+    date: 'February 23, 2009',
+    text: "Persik didn't like fish, only tuna",
   },
   {
     id: 8,
     title: 'Persik8',
-    date: "February 23, 2009",
-    text: "Persik has become very fluffy cat"
+    date: 'February 23, 2009',
+    text: 'Persik has become very fluffy cat',
   },
   {
     id: 9,
     title: 'Persik9',
-    date: "April 26, 2009",
-    text: "Persik - 1 year cat. After bath"
+    date: 'April 26, 2009',
+    text: 'Persik - 1 year cat. After bath',
   },
   {
     id: 10,
     title: 'Persik10',
-    date: "April 29, 2009",
-    text: "Persik outdoor"
+    date: 'April 29, 2009',
+    text: 'Persik outdoor',
   },
   {
     id: 11,
     title: 'Persik11',
-    date: "June 12, 2009",
-    text: "Persik at dacha"
+    date: 'June 12, 2009',
+    text: 'Persik at dacha',
   },
   {
     id: 12,
     title: 'Persik12',
-    date: "June 12, 2009",
-    text: "Persik at dacha. 2"
+    date: 'June 12, 2009',
+    text: 'Persik at dacha. 2',
   },
   {
     id: 13,
     title: 'Persik13',
-    date: "April 29, 2009",
-    text: "Persik outdoor with Dad"
+    date: 'April 29, 2009',
+    text: 'Persik outdoor with Dad',
   },
   {
     id: 14,
     title: 'Persik15',
-    date: "August 14, 2009",
-    text: "Persik at Dacha. 3"
+    date: 'August 14, 2009',
+    text: 'Persik at Dacha. 3',
   },
   {
     id: 15,
     title: 'Persik16',
-    date: "August 16, 2009",
-    text: "Persik at Dacha. 4"
+    date: 'August 16, 2009',
+    text: 'Persik at Dacha. 4',
   },
   {
     id: 16,
     title: 'Persik17',
-    date: "September 13, 2009",
-    text: "Persik's fluffiness is now evident"
+    date: 'September 13, 2009',
+    text: "Persik's fluffiness is now evident",
   },
   {
     id: 17,
     title: 'Persik18',
-    date: "September 13, 2009",
-    text: "Persik's fluffiness is now evident"
+    date: 'September 13, 2009',
+    text: "Persik's fluffiness is now evident",
   },
   {
     id: 18,
     title: 'Persik19',
-    date: "January 1, 2010",
-    text: "After New Year's Eve Party"
+    date: 'January 1, 2010',
+    text: "After New Year's Eve Party",
   },
   {
     id: 19,
     title: 'Persik20',
-    date: "October 15, 2010",
-    text: "Persik in the kitchen waiting for dinner"
+    date: 'October 15, 2010',
+    text: 'Persik in the kitchen waiting for dinner',
   },
   {
     id: 20,
     title: 'Persik21',
-    date: "April 17, 2010",
-    text: "Peach waiting for the mint harvest"
+    date: 'April 17, 2010',
+    text: 'Peach waiting for the mint harvest',
   },
   {
     id: 21,
     title: 'Persik22',
-    date: "November 27, 2010",
-    text: "Persik's portrait"
+    date: 'November 27, 2010',
+    text: "Persik's portrait",
   },
   {
     id: 22,
     title: 'Persik23',
-    date: "Desember 13, 2010",
-    text: "Persik never got used to the scratching post"
+    date: 'Desember 13, 2010',
+    text: 'Persik never got used to the scratching post',
   },
   {
     id: 23,
     title: 'Persik24',
-    date: "Mart 19, 2011",
-    text: "Persik didn't get enough sleep"
+    date: 'March 19, 2011',
+    text: "Persik didn't get enough sleep",
   },
   {
     id: 24,
     title: 'Persik25',
-    date: "September 18, 2011",
-    text: "Persik after the first haircut"
+    date: 'September 18, 2011',
+    text: 'Persik after the first haircut',
   },
   {
     id: 25,
     title: 'Persik26',
-    date: "December 27, 2011",
-    text: "Persik's first living Christmas treea"
+    date: 'December 27, 2011',
+    text: "Persik's first living Christmas treea",
   },
   {
     id: 26,
     title: 'Persik27',
-    date: "February 23, 2012",
-    text: "What's a renovation without Persik"
+    date: 'February 23, 2012',
+    text: "What's a renovation without Persik",
   },
   {
     id: 27,
     title: 'Persik28',
-    date: "Mart 2, 2012",
-    text: "The wardrobe is Persik's sleeping place"
+    date: 'March 2, 2012',
+    text: "The wardrobe is Persik's sleeping place",
   },
   {
     id: 28,
     title: 'Persik29',
-    date: "July 08, 2012",
-    text: "Persik hated outdoor"
+    date: 'July 08, 2012',
+    text: 'Persik hated outdoor',
   },
   {
     id: 29,
     title: 'Persik30',
-    date: "November 10, 2012",
-    text: "Persik liked pillows"
+    date: 'November 10, 2012',
+    text: 'Persik liked pillows',
   },
   {
     id: 30,
     title: 'Persik31',
-    date: "November 16, 2012",
-    text: "Persik liked to play with toilet paper"
+    date: 'November 16, 2012',
+    text: 'Persik liked to play with toilet paper',
   },
   {
     id: 31,
     title: 'Persik32',
-    date: "December 1, 2012",
-    text: "Persik liked books"
+    date: 'December 1, 2012',
+    text: 'Persik liked books',
   },
   {
     id: 32,
     title: 'Persik33',
-    date: "January 1, 2013",
-    text: "Under the Christmas tree"
+    date: 'January 1, 2013',
+    text: 'Under the Christmas tree',
   },
   {
     id: 33,
     title: 'Persik34',
-    date: "February 7, 2013",
-    text: "Persik was human being"
+    date: 'February 7, 2013',
+    text: 'Persik was human being',
   },
   {
     id: 34,
     title: 'Persik35',
-    date: "May 13, 2013",
-    text: "Persik had haircut, he is not very happy with that"
+    date: 'May 13, 2013',
+    text: 'Persik had haircut, he is not very happy with that',
   },
   {
     id: 35,
     title: 'Persik36',
-    date: "September 9, 2013",
-    text: "Persik had new home"
+    date: 'September 9, 2013',
+    text: 'Persik had new home',
   },
   {
     id: 36,
     title: 'Persik37',
-    date: "September 9, 2013",
-    text: "Persik peach explored the view from the window"
+    date: 'September 9, 2013',
+    text: 'Persik peach explored the view from the window',
   },
   {
     id: 37,
     title: 'Persik38',
-    date: "September 28, 2013",
-    text: "Halloween is coming soon"
+    date: 'September 28, 2013',
+    text: 'Halloween is coming soon',
   },
   {
     id: 38,
     title: 'Persik39',
-    date: "Оctober 5, 2013",
-    text: "There is never much fruit"
+    date: 'Оctober 5, 2013',
+    text: 'There is never much fruit',
   },
   {
     id: 39,
     title: 'Persik40',
-    date: "Оctober 31, 2013",
-    text: "Persik inspects what the household ate"
+    date: 'Оctober 31, 2013',
+    text: 'Persik inspects what the household ate',
   },
   {
     id: 40,
     title: 'Persik41',
-    date: "November 3, 2013",
-    text: "Persik on the walk"
+    date: 'November 3, 2013',
+    text: 'Persik on the walk',
   },
   {
     id: 41,
     title: 'Persik42',
-    date: "November 6, 2013",
-    text: "Persik in the lobby"
+    date: 'November 6, 2013',
+    text: 'Persik in the lobby',
   },
   {
     id: 42,
     title: 'Persik43',
-    date: "November 15, 2013",
-    text: "Persik at home"
+    date: 'November 15, 2013',
+    text: 'Persik at home',
   },
   {
     id: 43,
     title: 'Persik44',
-    date: "November 16, 2013",
-    text: "Persik liked this window"
+    date: 'November 16, 2013',
+    text: 'Persik liked this window',
   },
   {
     id: 44,
     title: 'Persik45',
-    date: "November 17, 2013",
-    text: "Persik liked bags"
+    date: 'November 17, 2013',
+    text: 'Persik liked bags',
   },
   {
     id: 45,
     title: 'Persik46',
-    date: "November 22, 2013",
-    text: "Persik - baby"
+    date: 'November 22, 2013',
+    text: 'Persik - baby',
   },
   {
     id: 46,
     title: 'Persik47',
-    date: "November 22, 2013",
-    text: "All cats like to hide"
+    date: 'November 22, 2013',
+    text: 'All cats like to hide',
   },
   {
     id: 47,
     title: 'Persik48',
-    date: "December 10, 2013",
-    text: "Persik in the bathroom"
+    date: 'December 10, 2013',
+    text: 'Persik in the bathroom',
   },
   {
     id: 48,
     title: 'Persik49',
-    date: "December 22, 2013",
-    text: "Persik on the walk. 2"
+    date: 'December 22, 2013',
+    text: 'Persik on the walk. 2',
   },
   {
     id: 49,
     title: 'Persik50',
-    date: "January 15, 2014",
-    text: "Persik liked this window. 2"
+    date: 'January 15, 2014',
+    text: 'Persik liked this window. 2',
   },
   {
     id: 50,
     title: 'Persik51',
-    date: "January 19, 2014",
-    text: "Persik's portrait. 2"
+    date: 'January 19, 2014',
+    text: "Persik's portrait. 2",
   },
   {
     id: 51,
     title: 'Persik52',
-    date: "Mart 28, 2014",
-    text: "Persik at the vet"
+    date: 'March 28, 2014',
+    text: 'Persik at the vet',
   },
   {
     id: 52,
     title: 'Persik53',
-    date: "Mart 28, 2014",
-    text: "Persik and Easter cake"
+    date: 'March 28, 2014',
+    text: 'Persik and Easter cake',
   },
   {
     id: 53,
-    title: 'Persik54'
+    title: 'Persik54',
+    date: 'May 1, 2014',
+    text: 'Persik likes bags',
   },
   {
     id: 54,
-    title: 'Persik55'
+    title: 'Persik55',
+    date: 'May 19, 2014',
+    text: 'Persik likes suitcases too',
   },
   {
     id: 55,
-    title: 'Persik56'
+    title: 'Persik56',
+    date: 'May 19, 2014',
+    text: 'When are we going to go somewhere?',
   },
   {
     id: 56,
-    title: 'Persik57'
+    title: 'Persik57',
+    date: 'June 27, 2014',
+    text: 'Persik likes to drink from the tap',
   },
   {
     id: 57,
-    title: 'Persik58'
+    title: 'Persik58',
+    date: 'August 22, 2014',
+    text: 'Someone likes to ride on the couch',
   },
   {
     id: 58,
-    title: 'Persik59'
+    title: 'Persik59',
+    date: 'August 24, 2014',
+    text: 'You need to lie exactly in the middle of the bed',
   },
   {
     id: 59,
-    title: 'Persik60'
+    title: 'Persik60',
+    date: 'August 25, 2014',
+    text: `After a cat's hard work day`,
   },
   {
     id: 60,
-    title: 'Persik61'
+    title: 'Persik61',
+    date: 'September 11, 2014',
+    text: 'Soft kitty, warm kitty...',
   },
   {
     id: 61,
-    title: 'Persik62'
+    title: 'Persik62',
+    date: 'September 29, 2014',
+    text: 'Stop coding...',
   },
   {
     id: 62,
-    title: 'Persik63'
+    title: 'Persik63',
+    date: 'October 5, 2014',
+    text: 'This is my place',
   },
   {
     id: 63,
-    title: 'Persik64'
+    title: 'Persik64',
+    date: 'January 18, 2015',
+    text: `Don't wake a sleeping cat`,
   },
   {
     id: 64,
-    title: 'Persik65'
+    title: 'Persik65',
+    date: 'January 18, 2014',
+    text: 'Pure Purr-fection',
   },
   {
     id: 65,
-    title: 'Persik66'
+    title: 'Persik66',
+    date: 'January 25, 2015',
+    text: 'Cactus Bodyguard',
   },
   {
     id: 66,
-    title: 'Persik67'
+    title: 'Persik67',
+    date: 'September 4, 2017',
+    text: 'Evening Thoughts',
   },
   {
     id: 67,
-    title: 'Persik68'
+    title: 'Persik68',
+    date: 'December 23, 2016',
+    text: 'Golden Eyes',
   },
   {
     id: 68,
-    title: 'Persik69'
+    title: 'Persik69',
+    date: 'April 18, 2015',
+    text: 'The Anti-Grooming Campaign',
   },
   {
     id: 69,
-    title: 'Persik70'
+    title: 'Persik70',
+    date: 'April 18, 2015',
+    text: `Where's my fur, Lebowski?`,
   },
   {
     id: 70,
-    title: 'Persik71'
+    title: 'Persik71',
+    date: 'April 28, 2015',
+    text: `I See What You're Doing`,
   },
   {
     id: 71,
-    title: 'Persik72'
+    title: 'Persik72',
+    date: 'May 6, 2015',
+    text: 'Paws and Relax',
   },
   {
     id: 72,
-    title: 'Persik73'
+    title: 'Persik73',
+    date: 'May 20, 2015',
+    text: 'Golden Hour, Golden Eyes',
   },
   {
     id: 73,
-    title: 'Persik74'
+    title: 'Persik74',
+    date: 'June 5, 2015',
+    text: 'FLÜFF: The essential home accessory',
   },
   {
     id: 74,
-    title: 'Persik75'
+    title: 'Persik75',
+    date: 'July 18, 2015',
+    text: 'My little soulmate',
   },
   {
     id: 75,
-    title: 'Persik76'
+    title: 'Persik76',
+    date: 'August 22, 2015',
+    text: 'Pet the cat',
   },
   {
     id: 76,
-    title: 'Persik77'
+    title: 'Persik77',
+    date: 'September 19, 2015',
+    text: 'Why code when you can pet?',
   },
   {
     id: 77,
-    title: 'Persik78'
+    title: 'Persik78',
+    date: 'November 17, 2015',
+    text: 'Work-Life Balance Expert',
   },
   {
     id: 78,
-    title: 'Persik79'
+    title: 'Persik79',
+    date: 'December 7, 2015',
+    text: `I don't do mice. I do investments`,
   },
   {
     id: 79,
-    title: 'Persik80'
+    title: 'Persik80',
+    date: 'January 27, 2016',
+    text: 'Top Floor Management',
   },
   {
     id: 80,
-    title: 'Persik81'
+    title: 'Persik81',
+    date: 'February 3, 2016',
+    text: 'Evening entertainment provided by... me',
   },
   {
     id: 81,
-    title: 'Persik82'
+    title: 'Persik82',
+    date: 'March 13, 2016',
+    text: 'Grey Thunder, Fluffy Lightning',
   },
   {
     id: 82,
-    title: 'Persik83'
+    title: 'Persik83',
+    date: 'June 19, 2016',
+    text: 'Undercover Agent: Fluff',
   },
   {
     id: 83,
-    title: 'Persik84'
+    title: 'Persik84',
+    date: 'June 5, 2016',
+    text: 'Digital Soul, Real Meow',
   },
   {
     id: 84,
-    title: 'Persik85'
+    title: 'Persik85',
+    date: 'July 9, 2016',
+    text: 'Lost in the Boot-muda Triangle',
   },
   {
     id: 85,
-    title: 'Persik86'
+    title: 'Persik86',
+    date: 'July 29, 2016',
+    text: `The definition of 'Chill`,
   },
   {
     id: 86,
-    title: 'Persik87'
+    title: 'Persik87',
+    date: 'August 13, 2026',
+    text: 'Vintage filter, timeless soul',
   },
   {
     id: 87,
-    title: 'Persik88'
+    title: 'Persik88',
+    date: 'August 26, 2016',
+    text: 'The Cat, the Wardrobe, and the Nap',
   },
   {
     id: 88,
-    title: 'Persik89'
+    title: 'Persik89',
+    date: 'September 12, 2016',
+    text: 'Supreme Leader of the Living Room',
   },
   {
     id: 89,
-    title: 'Persik90'
+    title: 'Persik90',
+    date: 'September 18, 2026',
+    text: `Wake me up when it's spring`,
   },
   {
     id: 90,
-    title: 'Persik91'
+    title: 'Persik91',
+    date: 'June 17, 2017',
+    text: 'My cat is my favorite bookmark',
   },
   {
     id: 91,
-    title: 'Persik92'
+    title: 'Persik92',
+    date: 'September 28, 2017',
+    text: 'Judging you for staying up past my bedtime',
   },
   {
     id: 92,
-    title: 'Persik93'
+    title: 'Persik93',
+    date: 'October 1, 2017',
+    text: 'Forever my little one',
   },
   {
     id: 93,
-    title: 'Persik94'
+    title: 'Persik94',
+    date: 'October 14, 2017',
+    text: 'Serious whiskers, serious vibes',
   },
   {
     id: 94,
-    title: 'Persik95'
+    title: 'Persik95',
+    date: 'January 2, 2018  ',
+    text: 'Hidden under the tree, lost in the art',
   },
   {
     id: 95,
-    title: 'Persik96'
+    title: 'Persik96',
+    date: 'February 25, 2018',
+    text: 'The Wet Chicken Phase',
   },
   {
     id: 96,
-    title: 'Persik97'
+    title: 'Persik97',
+    date: 'March 17, 2018',
+    text: 'Taste testing the 8th of March',
   },
   {
     id: 97,
-    title: 'Persik98'
+    title: 'Persik98',
+    date: 'April 1, 2018',
+    text: 'Capturing the essence of Purr-fection',
   },
   {
     id: 98,
-    title: 'Persik99'
+    title: 'Persik99',
+    date: 'November 21, 2019',
+    text: 'Occupied by His Majesty',
   },
   {
     id: 100,
-    title: 'Persik100'
-  }
-]
+    title: 'Persik100',
+    date: 'May 20, 2020',
+    text: 'My mask is my fur, my pass is my meow',
+  },
+];
 
 export default imagesList;

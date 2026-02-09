@@ -4,6 +4,7 @@ import './globals.css';
 import NavBar from '@/components/Navbar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import Script from 'next/script';
+import ScrollToTop from '@/components/scrollToTop/ScrollToTop';
 
 const comic = Comic_Neue({
   subsets: ['latin'],
@@ -45,14 +46,21 @@ export default function RootLayout({
         className={`${shantell.className} ${neucha.variable} ${comic.className}`}
         id="first-section"
       >
-        <div>
-          {/* <script src="/vendor/snow.js" defer /> */}
+        <ScrollToTop />
+
+        <div className="flex flex-col min-h-screen">
+          {/* for snow fall effect in winter time and colors in summer time */}
           <Script src="/vendor/snow.js" defer />
+
           <NavBar />
-          {children}
+
+          <main className="flex-grow">{children}</main>
+
           <Footer />
         </div>
-        <p id="second-section"></p>
+
+        {/* Якорь для скролла */}
+        <div id="second-section"></div>
       </body>
     </html>
   );

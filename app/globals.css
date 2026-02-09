@@ -5,6 +5,7 @@
 :root {
   --font-comic: 'Comic Neue';
   --font-shantell: "Shantell_Sans";
+  background-color: #F5F3F1;
 }
 
 .comic {

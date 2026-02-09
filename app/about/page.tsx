@@ -12,8 +12,7 @@ const About = () => {
       lg:items-start 
       lg:justify-center 
       pt-10 
-      h-[calc(100vh-84px)] 
-      bg-[#F5F3F1] 
+      h-[calc(100vh-84px-446px)]
       gap-[10px] 
       px-4"
     >
