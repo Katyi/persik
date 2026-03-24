@@ -50,7 +50,10 @@ export default function RootLayout({
 
         <div className="flex flex-col min-h-screen">
           {/* for snow fall effect in winter time and colors in summer time */}
-          <Script src="/vendor/snow.js" defer />
+          {/* <Script src="/vendor/snow.js" defer /> */}
+
+          {/* for sakura fall effect in spring time */}
+          <Script src="/vendor/sakura.js" defer />
 
           <NavBar />
 
