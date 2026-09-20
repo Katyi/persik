@@ -53,7 +53,10 @@ export default function RootLayout({
           {/* <Script src="/vendor/snow.js" defer /> */}
 
           {/* for sakura fall effect in spring time */}
-          <Script src="/vendor/sakura.js" defer />
+          {/* <Script src="/vendor/sakura.js" defer /> */}
+
+          {/* for autumn leaves fall effect */}
+          <Script src="/vendor/leaves.js" defer />
 
           <NavBar />
 
